@@ -11,8 +11,7 @@ public class EducationTitle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@NotNull(message = "Ime je obavezno polje!")
-    @Column(name = "name")
+    @NotNull(message = "Ime je obavezno polje!")
     private String name;
 
     public EducationTitle() {

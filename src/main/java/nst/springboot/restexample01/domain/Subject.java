@@ -1,6 +1,5 @@
 package nst.springboot.restexample01.domain;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -8,20 +7,17 @@ import jakarta.validation.constraints.Size;
 @Entity
 @Table(name = "tbl_subject")
 public class Subject {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotEmpty(message = "Morate uneti ime")
     @Size(min = 2, max = 10, message = "Ime mora biti izmeju 2 i 10 karaktera")
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "espb")
     private int espb;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "department_id")
     private Department department;
 

@@ -11,14 +11,20 @@
     <changeSet id="create-subject" author="p.vojinovic">
         <sqlFile path="ddl/create-subject.sql" relativeToChangelogFile="true"/>
     </changeSet>
+
     
     <!-- popuni tabelu depratment-->
     <changeSet id="init-department" author="p.vojinovic">
         <sqlFile path="dml/init-department.sql" relativeToChangelogFile="true"/>
     </changeSet>
-    
-    
+
     <changeSet id="init-subject" author="p.vojinovic">
         <sqlFile path="dml/init-subject.sql" relativeToChangelogFile="true"/>
     </changeSet>
+
+
+
+
+
+
 </databaseChangeLog>

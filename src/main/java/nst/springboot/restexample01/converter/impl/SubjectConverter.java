@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SubjectConverter implements DtoEntityConverter<SubjectDto, Subject> {
-
     @Autowired
     private DepartmentConverter departmentConverter;
 
@@ -29,6 +28,5 @@ public class SubjectConverter implements DtoEntityConverter<SubjectDto, Subject>
                 dto.getEspb(),
                 departmentConverter.toEntity(dto.getDepartmentDto()));
     }
-
 
 }

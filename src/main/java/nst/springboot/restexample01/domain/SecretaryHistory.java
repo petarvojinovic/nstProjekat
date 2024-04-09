@@ -1,47 +1,52 @@
 package nst.springboot.restexample01.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "tbl_secretary_history")
 public class SecretaryHistory {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @EmbeddedId
+    private SecretaryHistoryId id;
 
     @ManyToOne
-    @JoinColumn(name = "member_id")
-    private Member member;
-
-    @ManyToOne
+    @MapsId("departmentId")
     @JoinColumn(name = "department_id")
     private Department department;
 
-    @Column(name = "start_date")
+    @ManyToOne
+    @MapsId("memberId")
+    @JoinColumn(name = "member_id")
+    private Member member;
+
+    @PastOrPresent(message = "Datum pocetka mora biti u proslosti ili sadasnjosti!")
+    @NotNull(message = "Datum pocetka je obavezno polje!")
     private LocalDate startDate;
 
-    @Column(name = "end_date")
+    @Future(message = "Datum zavrsetka mora biti u buducnosti!")
+    @NotNull(message = "Datum zavrsetka je obavezno polje!")
     private LocalDate endDate;
 
     public SecretaryHistory() {
     }
 
-    public SecretaryHistory(Long id, Member member, Department department, LocalDate startDate, LocalDate endDate) {
+    public SecretaryHistory(SecretaryHistoryId id, Department department, Member member, LocalDate startDate, LocalDate endDate) {
         this.id = id;
-        this.member = member;
         this.department = department;
+        this.member = member;
         this.startDate = startDate;
         this.endDate = endDate;
     }
 
-    public Long getId() {
+    public SecretaryHistoryId getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(SecretaryHistoryId id) {
         this.id = id;
     }
 

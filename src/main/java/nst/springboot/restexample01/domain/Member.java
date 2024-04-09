@@ -6,18 +6,14 @@ import jakarta.validation.constraints.NotNull;
 @Entity
 @Table(name = "tbl_member")
 public class Member {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@NotNull(message = "Ime je obavezno!")
-    @Column(name = "first_name")
+    @NotNull(message = "Ime je obavezno!")
     private String firstName;
 
-    //@NotNull(message = "Prezime je obavezno!")
-    @Column(name = "last_name")
+    @NotNull(message = "Prezime je obavezno!")
     private String lastName;
 
     @ManyToOne

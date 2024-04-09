@@ -12,7 +12,7 @@ public class AcademicTitle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@NotNull(message = "Ime je obavezno")
+    @NotNull(message = "Ime je obavezno")
     @Column(name = "name")
     private String name;
 
