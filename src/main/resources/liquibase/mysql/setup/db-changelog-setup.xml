@@ -11,15 +11,51 @@
     <changeSet id="create-subject" author="p.vojinovic">
         <sqlFile path="ddl/create-subject.sql" relativeToChangelogFile="true"/>
     </changeSet>
+    <!-- kreiraj tabelu academic-title-->
+    <changeSet id="create-academic-title" author="p.vojinovic">
+        <sqlFile path="ddl/create-academic-title.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu education-title-->
+    <changeSet id="create-education-title" author="p.vojinovic">
+        <sqlFile path="ddl/create-education-title.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu scientific-field-->
+    <changeSet id="create-scientific-field" author="p.vojinovic">
+        <sqlFile path="ddl/create-scientific-field.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu member-->
+    <changeSet id="create-member" author="p.vojinovic">
+        <sqlFile path="ddl/create-member.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu academic-title-history-->
+    <changeSet id="create-academic-title-history" author="p.vojinovic">
+        <sqlFile path="ddl/create-academic-title-history.sql" relativeToChangelogFile="true"/>
+    </changeSet>
 
     
     <!-- popuni tabelu depratment-->
     <changeSet id="init-department" author="p.vojinovic">
         <sqlFile path="dml/init-department.sql" relativeToChangelogFile="true"/>
     </changeSet>
-
+    <!-- popuni tabelu subject-->
     <changeSet id="init-subject" author="p.vojinovic">
         <sqlFile path="dml/init-subject.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu academic-title-->
+    <changeSet id="init-academic-title" author="p.vojinovic">
+        <sqlFile path="dml/init-academic-title.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu education-title-->
+    <changeSet id="init-education-title" author="p.vojinovic">
+        <sqlFile path="dml/init-education-title.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu scientific-field-->
+    <changeSet id="init-scientific-field" author="p.vojinovic">
+        <sqlFile path="dml/init-scientific-field.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu member-->
+    <changeSet id="init-member" author="p.vojinovic">
+        <sqlFile path="dml/init-member.sql" relativeToChangelogFile="true"/>
     </changeSet>
 
 
