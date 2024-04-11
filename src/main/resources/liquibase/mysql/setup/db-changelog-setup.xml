@@ -31,6 +31,14 @@
     <changeSet id="create-academic-title-history" author="p.vojinovic">
         <sqlFile path="ddl/create-academic-title-history.sql" relativeToChangelogFile="true"/>
     </changeSet>
+    <!-- kreiraj tabelu director-history-->
+    <changeSet id="create-director-history" author="p.vojinovic">
+        <sqlFile path="ddl/create-director-history.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu secretary-history-->
+    <changeSet id="create-secretary-history" author="p.vojinovic">
+        <sqlFile path="ddl/create-secretary-history.sql" relativeToChangelogFile="true"/>
+    </changeSet>
 
     
     <!-- popuni tabelu depratment-->
